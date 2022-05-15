@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/App.css">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center">You are now logged out of Cyber Badger Toolkit</h1>
+                <img src="../static/img/American-Badger-smiling.jpg" alt="Badger">
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-3 offset-md-2">
+            <a class="nav-link" href="{% url 'login' %}">Login here</a>
+        </div>
+        <div class="col-3 offset-md-2">
+            <a class="nav-link" href="{% url 'register_user' %}">Register</a>
+        </div>
+    </div>
+</body>
+
+</html>
