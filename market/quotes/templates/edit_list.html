@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<form method="POST" class="post-form" action="/update_list/{{list.id}}">
+    {% csrf_token %}
+    <div class="container" style="width: 60%; margin: 0em 0em 0em 35em;">
+        <br>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-4">
+                <h3>Update Details</h3>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Item:</label>
+            <div class="col-sm-4">
+                <input type="text" name="item" id="id_item" required maxlength="200" value="{{ list.item }}" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Alert code:</label>
+            <div class="col-sm-4">
+                <input type="text" name="alert_code" id="id_alert_code" required maxlength="15"
+                    value="{{ list.alert_code }}" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Severity:</label>
+            <div class="col-sm-4">
+                <input type="text" name="severity" id="id_severity" required maxlength="20"
+                    value="{{ list.severity }}" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Agency:</label>
+            <div class="col-sm-4">
+                <input type="text" name="agency" id="id_agency" required maxlength="50" value="{{ list.agency }}" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Description:</label>
+            <div class="col-sm-4">
+                <input type="textarea" name="description" id="id_description" required maxlength="500"
+                    value="{{ list.description }}" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Completed (true or false):</label>
+            <div class="col-sm-4">
+                <input type="text" name="completed" id="id_completed" required maxlength="500"
+                    value="{{ list.completed }}" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4" style="margin: 0% 20% 0% 14%;">
+                <button type="submit" class="btn btn-success">Update</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+{% endblock %}
