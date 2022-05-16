@@ -1,8 +1,88 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
-    <h1 class="text-center">Cybersecurity Threat Alert Mitigation</h1>
-</div>
 
-{% endblock %}
+{% if ticker %}
+{{ticker}}
+{% endif %}
+
+
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-12">
+            <h3>This is the home page!</h3>
+        </div> -->
+    </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+            <h1>{{ api.symbol }} Stock information</h1>
+            <!-- {{ api }} This will show all api info -->
+            <form action="{% url 'home' %}" class="form-inline my-2 my-lg-0" method="POST">
+                {% csrf_token %}
+                <input class="form-control mr-sm-2" type="search" placeholder="Get stock quote" aria-label="Search"
+                    name="ticker">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Stock
+                    Quote</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Open</th>
+                        <th scope="col">Close</th>
+                        <th scope="col">52 week high</th>
+                        <th scope="col">52 week low</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ api.companyName }}</td>
+                        <td>{{ api.symbol }}</td>
+                        <td>{{ api.open }}</td>
+                        <td>{{ api.close }}</td>
+                        <td>{{ api.week52High }}</td>
+                        <td>{{ api.week52Low }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Price: {{ api.latestPrice }}</p>
+                    <p>Previous Close: {{ api.previousClose }}</p>
+                    <p>Market Cap: {{ api.marketCap }} </p>
+                    <p>YTD Change: {{ api.ytdChange }}</p>
+                    <p>52 Week High: {{ api.week52High }}</p>
+                    <p>52 Week Low: {{ api.week52Low }}</p>
+                    <!-- <p>{{ api }}</p> -->
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h1>{{ api.symbol }} stock information</h1>
+            </div>
+        </div> -->
+        {% if api %}
+        {% if api == "Error..." %}
+        There was a problem with your ticker symbol, please try again...
+        {% else %}
+
+        {% for key, value in api.items %}
+        {{ key }}: {{ value}}<br />
+        {% endfor %}
+
+
+        {% endif %}
+        {% endif %}
+
+
+
+        {% endblock %}
