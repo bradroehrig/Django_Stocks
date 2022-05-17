@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- *********************************** -->
+
+
+<div style="margin: 0% auto 2% auto; text-align: center">
+    <h1>Tips</h1>
+</div>
+
+<div style="width: 60%; margin: 0% auto 0% auto;">
+    <ul class="list-group">
+        <li class="list-group-item active">Best practices to be rich!</li>
+        <li class="list-group-item">Only use 50% of paycheck</li>
+        <li class="list-group-item">Don't gamble</li>
+        <li class="list-group-item">Only buy used cars</li>
+        <li class="list-group-item">Buy real estate</li>
+    </ul>
+</div>
+
+
+<!-- *********************************** -->
+<div style="margin: 2% auto 0% auto; text-align: center">
+    <button class="btn btn-outline-success my-2 my-sm-0">
+        <a href="{% url 'home' %}" style="color:green;">Research Stock</a>
+    </button>
+    <button class="btn btn-outline-success my-2 my-sm-0">
+        <a href="{% url 'add_stock' %}" style="color:green;">Add Stock</a>
+    </button>
+</div>
+
+{% endblock %}

@@ -30,9 +30,9 @@ def home(request):
     else:
         return render(request, 'home.html')
 
-@login_required(login_url='/members/login_user')
-def about(request):
-    return render(request, 'about.html', {})
+# @login_required(login_url='/members/login_user')
+# def about(request):
+#     return render(request, 'about.html', {})
 
 @login_required(login_url='/members/login_user')
 def base(request):
@@ -77,3 +77,17 @@ def delete(request, stock_id):
 def delete_stock(request):
     ticker = Stock.objects.all()
     return render(request, 'delete_stock.html', {'ticker': ticker})
+
+
+
+@login_required(login_url='/members/login_user')
+def external(request):
+    return render(request, 'external.html', {})
+
+@login_required(login_url='/members/login_user')
+def recs(request):
+    return render(request, 'recs.html', {})
+
+@login_required(login_url='/members/login_user')
+def tips(request):
+    return render(request, 'tips.html', {})

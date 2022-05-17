@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- *********************************** -->
+
+
+<div style="margin: 0% auto 2% auto; text-align: center">
+    <h1>External Resources</h1>
+</div>
+
+<div style="width: 60%; margin: 0% auto 0% auto;">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Fidelity</td>
+                <td>Fiduciary</td>
+                <td>www.??????</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Vanguard</td>
+                <td>Fiduciary</td>
+                <td>www.??????</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Robinhood</td>
+                <td>Fiduciary</td>
+                <td>www.??????</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+
+
+<!-- *********************************** -->
+<div style="margin: 2% auto 0% auto; text-align: center">
+    <button class="btn btn-outline-success my-2 my-sm-0">
+        <a href="{% url 'home' %}" style="color:green;">Research Stock</a>
+    </button>
+    <button class="btn btn-outline-success my-2 my-sm-0">
+        <a href="{% url 'add_stock' %}" style="color:green;">Add Stock</a>
+    </button>
+</div>
+
+{% endblock %}
