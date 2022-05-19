@@ -18,7 +18,7 @@
 <h3 align="center">Group Project Team Lexi</h3>
 
   <p align="center">
-    project_description
+    Application to help you research and save your favorite stocks. API pulls in current stock information and you rank your top stocks accordingly.
     <br />
     <a href="https://github.com/bradroehrig/Group_Project_Team_Lexi"><strong>Explore the docs »</strong></a>
     <br />
@@ -63,7 +63,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Description Needed Here
+Application to help you research and save your favorite stocks. API pulls in current stock information and you rank your top stocks accordingly.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
