@@ -6,7 +6,6 @@
 {{ticker}}
 {% endif %}
 
-
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center" style="margin: 0em 0em 3em 0em;">
@@ -43,23 +42,14 @@
                 </tbody>
             </table>
         </div>
-        <div style="margin: 2% 35% 2% 35%;">
+        <div style="margin: 2% 35% 2% 35%; text-align: center;">
             <form action="{% url 'home' %}" class="form-inline my-2 my-lg-0" method="POST">
                 {% csrf_token %}
                 <input class="form-control mr-sm-2" type="search" placeholder="Get stock quote" aria-label="Search"
                     name="ticker">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Stock
-                    Quote</button>
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Stock Quote</button>
             </form>
         </div>
-
-
-
-
-
-
-
-
         <div style="margin: 2% auto 2% auto;">
             <form action="{% url 'add_stock' %}" class="form-inline my-2 my-lg-0" method="">
                 {% csrf_token %}
@@ -67,8 +57,4 @@
                     to your portfolio</button>
             </form>
         </div>
-
-
-
-
         {% endblock %}
