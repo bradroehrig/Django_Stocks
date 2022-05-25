@@ -4,8 +4,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-<!-- [![MIT License][license-shield]][license-url] -->
-
 
 
 <!-- PROJECT LOGO -->
@@ -50,9 +48,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -61,7 +57,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+![Home Page Screenshot](documentation_images\cover.png?raw=true "Home Screenshot")
 
 Application to help you research and save your favorite stocks. API pulls in current stock information and you rank your top stocks accordingly.
 
@@ -93,6 +89,14 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    pip install Django==2.2.4
    ```
+3. Move into market folder
+   ```sh
+   cd market
+   ```
+4. Run server
+   ```sh
+   python manage.py runserver
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -101,7 +105,10 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Add stocks to save to your account!
+![Saving stocks](documentation_images\add_stocks.png?raw=true "Saving stocks")
+Share your best tips!
+![Sharing tips](documentation_images\tips.png?raw=true "Sharing tips")
 
 _For more examples, please refer to the [Documentation](https://github.com/bradroehrig/Group_Project_Team_Lexi)_
 
@@ -112,7 +119,7 @@ _For more examples, please refer to the [Documentation](https://github.com/bradr
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Complete v1
+- [ X ] Complete v1
 
 See the [open issues](https://github.com/bradroehrig/Group_Project_Team_Lexi/issues) for a full list of proposed features (and known issues).
 
@@ -137,35 +144,12 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- LICENSE -->
-<!-- ## License -->
-
-<!-- Distributed under the MIT License. See `LICENSE.txt` for more information. -->
-
-<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
-
-
-
 <!-- CONTACT -->
 ## Contact
 
 Project Link: [https://github.com/bradroehrig/Group_Project_Team_Lexi](https://github.com/bradroehrig/Group_Project_Team_Lexi)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
