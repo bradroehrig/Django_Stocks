@@ -15,7 +15,8 @@
     </div>
     <div class="row">
         <div style="margin: 0% auto 2% auto;">
-            <h3>{{ api.symbol }} Stock information</h3>
+            <h3 class="text-center">{{ api.symbol }} Stock information</h3>
+            <p> Please enter the ticker symbol in the field below to get a quote.</p>
         </div>
     </div>
     <div class="row">
@@ -48,14 +49,14 @@
                 {% csrf_token %}
                 <input class="form-control mr-sm-2" type="search" placeholder="Get stock quote" aria-label="Search"
                     name="ticker">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Stock
+                <button class="btn btn-outline-secondary my-2 my-sm-0 shadow-sm" type="submit">Stock
                     Quote</button>
             </form>
         </div>
         <div style="margin: 2% auto 2% auto;">
             <form action="{% url 'add_stock' %}" class="form-inline my-2 my-lg-0" method="">
                 {% csrf_token %}
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Stock
+                <button class="btn btn-outline-success my-2 my-sm-0 shadow" type="submit">Add Stock
                     to your portfolio</button>
             </form>
         </div>
